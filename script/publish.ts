@@ -10,6 +10,13 @@ const dir = fileURLToPath(new URL("..", import.meta.url))
 process.chdir(dir)
 const tag = `v${Script.version}`
 
+// Beta dogfoods the desktop app. The CLI and SDK packages ship from dev.
+if (Script.channel === "beta") {
+  console.log("\n=== desktop ===\n")
+  await $`bun ./packages/desktop/scripts/publish.ts`
+  process.exit(0)
+}
+
 const pkgjsons = await Array.fromAsync(
   new Bun.Glob("**/package.json").scan({
     absolute: true,
@@ -79,6 +86,9 @@ await $`bun ./packages/plugin/script/publish.ts`
 
 console.log("\n=== plugin-browser ===\n")
 await $`bun ./packages/plugin-browser/script/publish.ts`
+
+console.log("\n=== plugin-genui ===\n")
+await $`bun ./packages/plugin-genui/script/publish.ts`
 
 console.log("\n=== core ===\n")
 await $`bun ./packages/core/script/publish.ts`

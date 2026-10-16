@@ -290,6 +290,7 @@
         "@opencode/codemode": "workspace:*",
         "@opencode/plugin": "workspace:*",
         "@opencode/plugin-browser": "workspace:*",
+        "@opencode/plugin-genui": "workspace:*",
         "@opencode/schema": "workspace:*",
         "@opencode/util": "workspace:*",
         "@parcel/watcher": "2.5.1",
@@ -561,6 +562,22 @@
         "typescript": "catalog:",
       },
     },
+    "packages/plugin-genui": {
+      "name": "@opencode/plugin-genui",
+      "version": "2.0.27",
+      "dependencies": {
+        "@opencode/ai": "workspace:*",
+        "@opencode/plugin": "workspace:*",
+        "@opencode/schema": "workspace:*",
+        "effect": "catalog:",
+      },
+      "devDependencies": {
+        "@tsconfig/bun": "catalog:",
+        "@types/bun": "catalog:",
+        "@typescript/native-preview": "catalog:",
+        "typescript": "catalog:",
+      },
+    },
     "packages/plugins/figma": {
       "name": "@opencode/plugin-figma",
       "version": "2.0.30",
@@ -680,6 +697,7 @@
       "dependencies": {
         "@kobalte/core": "catalog:",
         "@opencode/client": "workspace:*",
+        "@opencode/plugin-genui": "workspace:*",
         "@opencode/ui": "workspace:*",
         "@opencode/util": "workspace:*",
         "@pierre/diffs": "catalog:",
@@ -1037,6 +1055,7 @@
   "patchedDependencies": {
     "@pierre/trees@1.0.0-beta.4": "patches/@pierre%2Ftrees@1.0.0-beta.4.patch",
     "@tanstack/virtual-core@3.17.8": "patches/@tanstack%2Fvirtual-core@3.17.8.patch",
+    "electron-updater@6.8.9": "patches/electron-updater@6.8.9.patch",
     "ghostty-web@github:anomalyco/ghostty-web#83c0a07": "patches/ghostty-web@0.3.0.patch",
     "@modelcontextprotocol/client@2.0.0": "patches/@modelcontextprotocol%2Fclient@2.0.0.patch",
     "pacote@21.5.1": "patches/pacote@21.5.1.patch",
@@ -1045,6 +1064,8 @@
     "solid-js@1.9.15": "patches/solid-js@1.9.15.patch",
     "vite@8.2.2": "patches/vite@8.2.2.patch",
     "@ff-labs/fff-bun@0.10.5": "patches/@ff-labs%2Ffff-bun@0.10.5.patch",
+    "app-builder-lib@26.15.7": "patches/app-builder-lib@26.15.7.patch",
+    "@corvu/drawer@0.2.4": "patches/@corvu%2Fdrawer@0.2.4.patch",
     "@dnd-kit/dom@0.5.0": "patches/@dnd-kit%2Fdom@0.5.0.patch",
     "@ai-sdk/openai-compatible@2.0.41": "patches/@ai-sdk%2Fopenai-compatible@2.0.41.patch",
   },
@@ -2051,6 +2072,8 @@
     "@opencode/plugin-browser": ["@opencode/plugin-browser@workspace:packages/plugin-browser"],
 
     "@opencode/plugin-figma": ["@opencode/plugin-figma@workspace:packages/plugins/figma"],
+
+    "@opencode/plugin-genui": ["@opencode/plugin-genui@workspace:packages/plugin-genui"],
 
     "@opencode/posts": ["@opencode/posts@workspace:packages/posts"],
 

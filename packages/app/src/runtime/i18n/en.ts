@@ -342,6 +342,9 @@ export const dict = {
   "dialog.mcp.title": "MCPs",
   "dialog.mcp.description": "{{enabled}} of {{total}} enabled",
   "dialog.mcp.empty": "No MCPs configured",
+  "dialog.mcp.search.empty": "No MCPs found",
+  "dialog.fork.search.empty": "No messages found",
+  "dialog.fork.description": "Edit an earlier message in a new session",
 
   "mcp.status.connected": "connected",
   "mcp.status.failed": "failed",
@@ -688,6 +691,8 @@ export const dict = {
   "settings.tab.extensions": "Extensions",
   "settings.tab.experimental": "Experimental",
   "settings.experimental.description": "Try experimental features",
+  "settings.experimental.row.generatedUI.title": "Generated UI",
+  "settings.experimental.row.generatedUI.description": "Let agents show dashboards, charts and forms in the timeline",
   "settings.guiExtensions.title": "Extensions",
   "settings.guiExtensions.description": "Built-in GUI extensions in this window. Development builds only.",
   "settings.guiExtensions.reload": "Reload",
@@ -827,6 +832,7 @@ export const dict = {
   "settings.timeline.category.subagents": "Subagents",
   "settings.timeline.category.notices": "Notices",
   "settings.timeline.category.tools": "Other tools",
+  "settings.timeline.category.commentary": "Commentary",
 
   "settings.general.row.language.title": "Language",
   "settings.general.row.language.description": "Change the display language for OpenCode",
